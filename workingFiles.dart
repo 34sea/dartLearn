@@ -38,7 +38,14 @@ void main() async {
   print("Files");
   var config = File("./teste.txt");
 
-  print(await readFile(config));
+  // print(await readFile(config));
+  String linha = await readFile(config);
+  String l = linha.replaceAll("[", "").replaceAll("]", "");
+  List<String> linhas = l.split(",");
+  for(final line in linhas){
+    print(line);
+  }
+
   // print(await writeFile("Ola", config));
   // print(await deleFile(config));
 
