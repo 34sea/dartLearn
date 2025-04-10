@@ -1,3 +1,7 @@
+import 'dart:math';
+import 'dart:io';
+import 'dart:convert';
+
 class Pessoa {
   String nome;
   String? _bilhete;
@@ -91,10 +95,10 @@ void main() {
   print("Name2: $name2, \nIdade2: $age2, \nHeigth: $height");
 
   //constantes
-  const pi = 3.14;
-  final g = 10;
+  const PI = 3.14;
+  final G = 10;
   
-  print("Contante: $pi e $g");
+  print("Contante: $PI e $G");
 
   //Para variaveis que podem ser nulos
   String? gargantu;
@@ -161,6 +165,19 @@ void main() {
   //Funções
   print("Fibonacci");
   print(fibonacci(20));
+
+  //Bibliotecas
+  print("Bibliotecas");
+  print("Math");
+  print(sqrt(16));
+
+  var degree = 30;
+  var radians = degree*(pi/180);
+  var degreeSin = sin(radians);
+  print(degreeSin);
+  print(pi);
+  var random = Random();
+  print(random.nextInt(10));
 
 
 }
