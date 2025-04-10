@@ -27,11 +27,40 @@ void main() {
   gargantu = "Yes";
 
   print("Gargantu: $gargantu");
+
   //Fluxo
   if(student){
     print("Student");
   }else{
     print("No student");
   }
+
+  //Arrays
+  var frutas = ["Manga", "Banana", "Goaba"];
+  List<int> numbers = [1, 2, 3, 4];
+  List<double> constantes = [];
+  const listaFixa = [1, 2, 3, 4];
+
+  //Adicionar
+  frutas.add("Pera");
+  constantes.add(3.14);
+  //Remover
+  frutas.remove("Manga");
+  //Atualizar
+  frutas[0] = "Uva";
+  //Tamanho
+  numbers.add(frutas.length);
+
+  
+
+  for(final fruta in frutas){
+    print("Fruta: $fruta");
+  }
+
+  for(final number in numbers){
+    print("Numero: $number");
+  }
+
+  //Estruturas de repetição
   
 }
