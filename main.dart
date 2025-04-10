@@ -1,3 +1,77 @@
+class Pessoa {
+  String nome;
+  String? _bilhete;
+  int idade;
+
+
+  // Construtor
+  Pessoa(this.nome, this.idade);
+
+  // Método
+  void falar() {
+    print('Olá, meu nome é $nome e tenho $idade anos e o meu bilhete é: $_bilhete.');
+  }
+
+  String? getBilhete(){
+    return _bilhete;
+  }
+
+  void setBilhete(String numbers){
+    _bilhete = numbers;
+  }
+}
+
+class AnimalSound{
+  String sound(String so){
+    return so;
+  }
+}
+
+class Animal extends AnimalSound{
+  String especie;
+  List<String> caracteristicas;
+
+  Animal(this.especie, this.caracteristicas);
+
+  List<String> getCaracteristicas(){
+    return caracteristicas;
+  }
+
+  void setCaracteristicas(String car){
+    caracteristicas.add(car);
+  }
+
+  String getEspecie(){
+    return especie;
+  }
+
+  void setEspecie(String name){
+    especie = name;
+  }
+
+  @override
+  String toString(){
+    return 'Animal(Especie: $especie, Caracteristicas: $caracteristicas)';
+  }
+
+  @override
+  String sound(String so){
+    return so;
+  }
+  
+}
+
+
+int fibonacci(int number){
+  if(number == 0 || number == 1){
+    return number;
+  }
+
+  return fibonacci(number - 1) + fibonacci(number - 2);
+}
+
+
+
 void main() {
 
   //Impressão
@@ -51,7 +125,7 @@ void main() {
   //Tamanho
   numbers.add(frutas.length);
 
-  
+  //Estruturas de repetição
 
   for(final fruta in frutas){
     print("Fruta: $fruta");
@@ -61,6 +135,32 @@ void main() {
     print("Numero: $number");
   }
 
-  //Estruturas de repetição
+  //Objectos
+
+  var pessoa = Pessoa("Roma", 20);
+  pessoa.idade = 14;
+  pessoa._bilhete = "sdlkadsa";
+
+  print(pessoa._bilhete);
+
+  pessoa.falar();
+
+
+  Animal animal = Animal("Ave", ["voo", "Garra"]);
+
+
+  print("Animal info");
+  animal.setEspecie("Gato");
+  animal.setCaracteristicas("Salto");
+  print(animal.getEspecie());
+  print(animal.getCaracteristicas());
+  print(animal.toString());
+  print(animal.sound("AU au"));
+
   
+  //Funções
+  print("Fibonacci");
+  print(fibonacci(20));
+
+
 }
